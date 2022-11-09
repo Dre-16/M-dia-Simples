@@ -1,8 +1,4 @@
-//+------------------------------------------------------------------+
-//|                                             Script Olá Mundo.mq5 |
-//|                                                          AndreMB |
-//|                                             https://www.mql5.com |
-//+------------------------------------------------------------------+
+
 #property copyright "AndreMB"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
@@ -16,21 +12,25 @@ void OnStart()
   
  
  //Notas durante o periodo letivo//  
-  double nota1 = 3.30;
-  double nota2 = 8.50;
-  double nota3 = 4.90;
+  double nota1 = 9.00;
+  double nota2 = 6.00;
+  double nota3 = 4.00;
   
   double media2 = (nota1 + nota2 + nota3);
-  double resultado = (media2 / 3);
+  double resultado = (media2) / 3;
+  double nota = (resultado);
   
-  if(resultado >= media1)
+    
+  
+    if(resultado >= media1)
     {
-     printf("O Aluno foi aprovado");
+     Print("O aluno foi aprovado! E sua nota foi:" , DoubleToString (nota,2) );
     }
-   else
-     {
-      printf("O Aluno foi reprovado");
-     };
-  }
-//+------------------------------------------------------------------+
+   else if(resultado < media1)
+          {
+           Print("O aluno foi reprovado! E sua nota foi:" , DoubleToString (nota,2) );
+          };
+          
 
+}
+//+------------------------------------------------------------------+
